@@ -1,0 +1,48 @@
+Tipe-tipe Node :
+
+1.  ELement
+2.  Attribute
+3.  Text
+4.  CData Section
+5.  Entity Reference
+6.  Entity
+7.  Processing Intrucion
+8.  Comment
+9.  Document
+10. Document Type
+11. Document Fragment
+12. Notation
+
+======================================================================================
+
+Node           : jika kita memilih salah satu dari sekian banyak element pada DOM Tree
+NodeList       : dapat berisi node apapun dan lebih dari satu elemt pada DOM Tree
+HTMLCollection : harus berisi element HTML 
+
+Cth Node           : <p> / "paragraph-1"
+Cth NodeList       : <p>, <div>, "paragraph-1", "paragraph-2"
+Cth HTMLCollection : <p>, <div>, <h1>, <a>
+
+===========================================================================
+
+Persamaan dan perbedaan NodeList & HTML Collection
+
+1. Keduanya merupakan kumpulan node
+2. Struktur datanya mirip array
+3. 'nodeList' dapat berisi node apapun, sedangkan HTMLCollection harus berisi element HTML
+4. HTMLCollection bersifat live sedangkan nodeList tidak
+
+===========================================================================
+
+Stuktur Hierarki DOM 
+
+1. Root Node : 
+    - node yang menjadi sumber dari semua node lain didalam DOM Document
+
+2. Parent Node :
+    - node yang berada 1 tingkat diatas node yang lain
+    - cth: body adalah parent dari h1,p,div,a
+
+3. Child Node : 
+    - node yang berada 1 tingkat dibawah node yang lain
+    - cth: h1 adalah element child dari body 

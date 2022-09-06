@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document -JS</title>
+    <link rel="stylesheet" href="latihan-DOM-selection.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="wrapper-1">
+        <div class="wrapper-2">
+          <div class="wrapper-3">
+            <div class="container">
+              <h2 id="head">Programming Language</h2>
+              <div class="wrapper-4">
+                <div class="content">
+                  <p class="p1">Paragraph 1</p>
+                  <p class="p2">Paragraph 2</p>
+                  <p class="p3">Paragraph 3</p>
+                </div>
+
+                <div class="content-two">
+                  <p class="p4">Paragraph 4</p>
+                  <div class="list-items">
+                    <ul>
+                      <li>Item 1</li>
+                      <li>Item 2</li>
+                      <li>Item 3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // const head = document.getElementById("head");
+
+      // head.style.backgroundColor = "#999";
+      // head.style.color = "blue";
+      // head.style.padding = "20px";
+      // head.style.marginTop = "-10px";
+      // head.style.fontWeight = "900";
+      // head.style.fontSize = "30px";
+      // head.innerHTML = "Ketsar Ali";
+
+      // ==================================
+
+      //   give style for paragraph
+
+      // const p = document.getElementsByTagName("p");
+      // const p1 = document.getElementsByClassName("p1")[2];
+      // p1.innerHTML = "It Is a Paragraph";
+
+      // for (let i = 0; i < p.length; i++) {
+      //   p[i].style.backgroundColor = "skyblue";
+      // }
+
+      // ========================================
+
+      // take an element html used querySelector
+
+      // const p4 = document.querySelector(".content-two .p4");
+      // p4.style.backgroundColor = "blue";
+      // p4.style.color = "#fff";
+
+      const list = document.querySelector(".list-items ul li:nth-child(3)");
+      list.style.backgroundColor = "orange";
+
+      const smallWrapper = document.querySelector(".content-two");
+      const listAll = smallWrapper.querySelector("p");
+      // listAll.style.backgroundColor = "blue";
+      // listAll.style.color = "#fff";
+
+      const mainWrapper = document.querySelectorAll("p");
+      // mainWrapper.style.backgroundColor = "salmon";
+      // mainWrapper.style.color = "#fff";
+
+      // for (let i = 0; i < mainWrapper.length; i++) {
+      //   mainWrapper[i].style.backgroundColor = "salmon";
+      // }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Project</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 30px auto;
+      }
+      .oldBtn {
+        padding: 8px 12px;
+        background-color: green;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+        font-weight: 600;
+        font-size: 18px;
+        color: #fff;
+        margin-left: 50px;
+      }
+      .newButton {
+        padding: 8px 12px;
+        background-color: red;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+        font-weight: 600;
+        font-size: 17px;
+        color: #fff;
+      }
+
+      .red-color-type {
+        background-color: red;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: 30px auto 15px;
+      }
+
+      .green-color-type {
+        background-color: green;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: 30px auto 15px;
+      }
+
+      .blue-color-type {
+        background-color: blue;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: 30px auto 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1 -->
+    <button type="button" class="oldBtn" id="colorChange">Click Here</button>
+
+    <!-- 2 -->
+
+    <div class="wrapper">
+      <div class="colorOne">
+        <div class="red-color-type"></div>
+        <input type="range" name="thisRed" min="1" max="255" />
+      </div>
+      <div class="colorTwo">
+        <div class="green-color-type"></div>
+        <input type="range" name="thisGreen" min="1" max="255" />
+      </div>
+      <div class="colorThree">
+        <div class="blue-color-type"></div>
+        <input type="range" name="thisBlue" min="1" max="255" />
+      </div>
+    </div>
+
+    <script>
+      // button click -- color will change, if the button has been clicked
+      const btnColorChange = document.getElementById("colorChange");
+
+      btnColorChange.onclick = () => {
+        const colorR = Math.round(Math.random() * 255 + 1);
+        const colorG = Math.round(Math.random() * 255 + 1);
+        const colorB = Math.round(Math.random() * 255 + 1);
+        console.log((document.body.style.backgroundColor = "rgb(" + colorR + ", " + colorG + ", " + colorB + ")"));
+        btnColorChange.classList.toggle("active");
+        // document.body.style.backgroundColor = "rgb(" + colorR + ", " + colorG + ", " + colorB + ")";
+      };
+
+      const newBtn = document.createElement("button");
+      const btnText = document.createTextNode("Try Clicking Again");
+      newBtn.appendChild(btnText);
+      newBtn.setAttribute("type", "button");
+      newBtn.setAttribute("class", "newButton");
+      btnColorChange.after(newBtn);
+      newBtn.style.marginLeft = "10px";
+      console.log(newBtn);
+
+      newBtn.addEventListener("click", () => {
+        const colorR = Math.round(Math.random() * 255 + 1);
+        const colorG = Math.round(Math.random() * 255 + 1);
+        const colorB = Math.round(Math.random() * 255 + 1);
+        console.log((document.body.style.backgroundColor = "rgb(" + colorR + ", " + colorG + ", " + colorB + ")"));
+
+        newBtn.classList.toggle("newBtn");
+      });
+
+      //  input range type -- color will change, if the range is set
+      const redColor = document.querySelector("input[name=thisRed]");
+      const greenColor = document.querySelector("input[name=thisGreen]");
+      const blueColor = document.querySelector("input[name=thisBlue]");
+
+      redColor.addEventListener("change", () => {
+        const thisR = redColor.value * 5;
+        const thisG = greenColor.value;
+        const thisB = blueColor.value;
+        console.log((document.body.style.backgroundColor = "rgb(" + thisR + ", " + thisG + ", " + thisB + ")"));
+      });
+      greenColor.addEventListener("change", () => {
+        const thisR = redColor.value;
+        const thisG = greenColor.value * 5;
+        const thisB = blueColor.value;
+        console.log((document.body.style.backgroundColor = "rgb(" + thisR + ", " + thisG + ", " + thisB + ")"));
+      });
+      blueColor.addEventListener("change", () => {
+        const thisR = redColor.value;
+        const thisG = greenColor.value;
+        const thisB = blueColor.value * 5;
+        console.log((document.body.style.backgroundColor = "rgb(" + thisR + ", " + thisG + ", " + thisB + ")"));
+      });
+
+      //   mousemove() -- color will change, if the mouse/cursor is moved
+      document.body.addEventListener("mousemove", (e) => {
+        const xPos = Math.round((e.clientX / window.innerWidth) * 255);
+        const yPos = Math.round((e.clientY / window.innerWidth) * 255);
+
+        document.body.style.background = "rgb(" + xPos + ", " + yPos + ", 120)";
+      });
+    </script>
+  </body>
+</html>

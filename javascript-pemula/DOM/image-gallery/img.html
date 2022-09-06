@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery JS</title>
+    <link rel="stylesheet" href="img.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <img src="img/jb.jpg" alt="" class="tampil" />
+      <div class="thumbnail">
+        <img src="img/jb.jpg" alt="" class="thumb" />
+        <img src="img/jb-2.jpg" alt="" class="thumb" />
+        <img src="img/jb-3.jpg" alt="" class="thumb" />
+        <img src="img/jb-4.jpg" alt="" class="thumb" />
+        <img src="img/jb-5.jpg" alt="" class="thumb" />
+        <img src="img/jb-6.jpg" alt="" class="thumb" />
+      </div>
+    </div>
+
+    <script>
+      const thumbs = document.querySelectorAll(".thumb");
+      const wrapper = document.querySelector(".wrapper");
+      const main = document.querySelector(".tampil");
+
+      wrapper.addEventListener("click", (e) => {
+        if ((e.target.className = "thumb")) {
+          main.src = e.target.src;
+        }
+
+        main.classList.add("aktif");
+
+        setTimeout(() => {
+          main.classList.remove("aktif");
+        }, 600);
+
+        thumbs.forEach((klik) => {
+          if ((klik.classList.contains = "select")) {
+            klik.classList.remove("select");
+          }
+        });
+
+        e.target.classList.add("select");
+        // //   change tampil
+        // if (e.target.className == "thumb") {
+        //   main.src = e.target.src;
+        // }
+        //     // animasi tampil
+        //     main.classList.add("active");
+        //     setTimeout(() => {
+        //       main.classList.remove("active");
+        //     }, 500);
+        //     thumbs.forEach((el) => {
+        //       if (el.classList.contains("select")) {
+        //         el.classList.remove("select");
+        //       }
+        //     });
+        //     e.target.classList.add("select");
+      });
+    </script>
+  </body>
+</html>

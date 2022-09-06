@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      //ex penggunaan array sederhana
+      //   menggunakan variable biasa
+      let hari1 = "Senin";
+      hari2 = "Selasa";
+      hari3 = "Rabu";
+      hari4 = "Kamis";
+      hari5 = "Jumat";
+      hari6 = "Sabtu";
+      hari7 = "Minggu";
+
+      console.log(hari1, hari2, hari3, hari4, hari5, hari6, hari7);
+
+      //   menggunakan array
+      let hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
+
+      console.info(hari);
+      console.info(hari[3]);
+      console.info(typeof [hari]);
+      console.info(hari.length);
+
+      //   menyimpan function didalam array
+      var coba = function () {
+        alert("Halo Ketsar!");
+      };
+      var result = [coba];
+
+      console.log(result[0]);
+
+      // ===============================
+      //manggil array di dalam array
+
+      /*  const animals = ["Kucing", "Burung", "Semut", "Gajah", "Kelinci", ["Badak", "Dinosaurus", "Cheetah"]];
+
+      console.info(animals[5][2]); */
+    </script>
+  </body>
+</html>

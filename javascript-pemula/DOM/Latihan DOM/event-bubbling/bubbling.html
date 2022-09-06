@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Bubbling</title>
+    <link rel="stylesheet" href="bubbling.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- <img src="img/syakir.jpg" width="100" height="100" /> -->
+        <span class="nama">Syakir</span>
+        <span class="telp">08123456789</span>
+        <!-- close span => a href -->
+        <span class="close">×</span>
+      </div>
+      <div class="card">
+        <!-- <img src="img/nswa.jpg" width="100" height="100" /> -->
+        <span class="nama">Naswa</span>
+        <span class="telp">08123456789</span>
+        <!-- close span => a href -->
+        <span class="close">×</span>
+      </div>
+    </div>
+
+    <script>
+      const tutup = document.querySelectorAll(".close");
+      const wrapper = document.querySelector(".container");
+
+      wrapper.addEventListener("click", (e) => {
+        if (e.target.className == "close") {
+          e.target.parentElement.style.display = "none";
+          e.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>

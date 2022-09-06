@@ -1,0 +1,61 @@
+pengertian array secara umum : susunan sistematis dan objek objek yang serupa
+
+pengertian array dalam programming : sebuah tipe data untuk mendeskripsikan kumpulan elemen (nilai atau variable), yang tiap-tiap elemennya memiliki index.
+
+atau : array adalah sebuah variable yang lebih sakti, sebab bisa menampung lebih dari satu nilai
+
+==================================================================
+
+fungsi array : 
+1. dapat mempermudah pengelolaan nilai/value/data
+    - penulusuran dan pencarian
+2. untuk management memory
+
+===================================================================
+
+karakteriktik tipe data array :
+1. Variable Jamak, yang mempunyai banyak elemen yang diacu dengan nama yang sama
+
+2. sebuah kumpulan key dan value pencarian
+
+3. key adalah index pada array dengan tipe integer yang dimulai dari 0
+
+4. Array pada Javascript bertipe object
+
+5. Array pada Javascript memiliki fungsi/ method length untuk menghiting jumlah elemen didalamnya
+
+6. Elemen pada array boleh memiliki tipe data yang berbeda
+
+==============================================================================
+
+Dalam memanipulasi sebuah array ada beberapa method yang perlu di ketahui, diantaranya :
+
+1. Method Length : untuk menampilkan jumlah keseluruhan elemen yang ada didalam array.
+
+2. Method Join : berfungsi untuk menggabungkan seluruh array dan mengubahnya menjadi string.
+
+3. Method : 
+    - Push     : untuk menambah elemen baru di akhir array
+    - Pop      : untuk menghapus elemen terakhir diarray
+    - Unshift  : untuk menambah elemen baru di awal array
+    - Shift    : untuk menghapus elemen pertama pada array
+    - Slice    : untuk memotong sebuah elemen pada array 
+    - Splice   : untuk menyambung sebuah elemen lama dengan elemen baru pada array 
+    - Foreach  : untuk melakukan looping pada array, hanya saja tidak mengembalikan array
+    - map      : untuk melakukan looping pada array, dan mengembalikan sebuah array
+    - sort     : untuk mengurutkan sebuah elemen pada array
+    - Filter   : mengembalikan banyak nilai
+    - Find     : mengembalikan satu nilai
+
+
+
+
+
+
+
+
+
+
+
+
+

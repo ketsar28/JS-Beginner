@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulasi Array</title>
+  </head>
+  <body>
+    <script>
+      // Manipulasi cara sederhana
+      //   const manipulation = ["Muhammad", "Ketsar", "Ali"];
+      //   const manipulation = [];
+      //   manipulation[0] = "Muhammad";
+      //   manipulation[1] = "Ketsar";
+      //   manipulation[2] = "Ali";
+
+      //   console.log(manipulation);
+
+      //   Menghapus sebuah elemen pada array cara sederhana
+      // const manipulation1 = ["Muhammad", "Ketsar", "Ali", "Abi"];
+      // manipulation1[2] = undefined;
+      // console.info(manipulation1);
+
+      // ===========================================================================
+
+      //   Manipulasi Cara Array
+      //   1. mengetahui jumlah isi elemen pada array menggunakan length
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali"];
+      //   console.info(manipulation2.length);
+
+      //   ============================================
+      // 2. Menggabungkan isi pada array dan mengubah menjadi string
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali"];
+      // const tipeData = "Ini String";
+      // console.log(manipulation2.join(" "));
+      // console.log(typeof manipulation2);
+      // console.log(typeof tipeData);
+
+      //   ============================================
+
+      //   3. Menambah sebuah elemen terakhir pada array menggunakan push
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali"];
+      // manipulation2.push("Abi", "Wahid");
+      //   console.info(manipulation2);
+
+      //   ============================================
+
+      //   4. Menghapus sebuah elemen terakhir pada array menggunakan pop
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali"];
+      // manipulation2.pop("Wahid");
+      // manipulation2.pop(); //bisa di isi argument popnya, bisa pula tidak
+      //   console.info(manipulation2);
+
+      //   ============================================
+
+      //   5. Menambah sebuah elemen pada awal array menggunakan unshift
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali"];
+      // manipulation2.unshift("Naswa", "Aulia", "&");
+      //   console.info(manipulation2);
+
+      //   ============================================
+
+      //   6. Menghapus sebuah elemen pada awal array menggunakan shift
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali", "Abi", "Wahid"];
+      // manipulation2.shift();
+      // manipulation2.shift();
+      // manipulation2.shift();
+      // console.info(manipulation2.join(" "));
+
+      //   ============================================
+
+      // 7. Slice    : untuk memotong sebuah elemen pada array
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali", "Abi", "Wahid"];
+      // const result = manipulation2.slice(1, 3); //.slice(index awal, index akhir);
+      // console.log(manipulation2.join(" "));
+      // console.log(result.join(" "));
+
+      //   ============================================
+
+      // 8. Splice    : untuk menyambung sebuah elemen atau menambahkan elemen baru di tengah array lainnya
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali"];
+      // manipulation2.splice(2, 3, "Abi", "Wahid"); //.slice(index ke berapa, hapus index ke berapa, apa yang ingin di tambahkan);
+      // console.info(manipulation2);
+
+      //   ============================================
+
+      // 9. foreach :  untuk melakukan looping pada array, hanya saja tidak mengembalikan array
+      // const manipulation2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // const manipulation2 = ["Muhammad", "Ketsar", "Ali"];
+
+      // for biasa
+      // for (let i = 0; i < manipulation2.length; i++) {
+      //   console.info(manipulation2[i]);
+      // }
+
+      // function expression
+      // const result = function (e) {
+      //   console.info(e);
+      // };
+      // manipulation2.forEach(result);
+
+      // original foreach method
+      // manipulation2.forEach(function (e, i) {
+      //   console.log("Siswa Ke - " + (i + 1) + " Adalah : " + e);
+      // });
+
+      //   ============================================
+
+      // 10. map      : untuk melakukan looping pada array, dan mengembalikan sebuah arrayy
+      // const manipulation2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      // function expression
+      // const result = manipulation2.map(function (e) {
+      //   return e * 2;
+      // });
+      // console.log(result.join(" "));
+
+      // original map
+      // manipulation2.map(function (e) {
+      //   return e;
+      // });
+
+      // console.log(manipulation2.join(" - "));
+
+      //   ============================================
+
+      // 11. sort     : untuk mengurutkan sebuah elemen pada array
+      //jika tidak berurutan maka buat function didalam sort
+      // var manipulation2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50];
+      // manipulation2.sort(function (a, b) {
+      //   return;
+      // });
+      // manipulation2.sort();
+      // console.info(manipulation2.join(" "));
+
+      //   ============================================
+
+      // 12.Filter   : mengembalikan banyak nilai
+      // const manipulation2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50];
+      // const result = manipulation2.filter(function (a) {
+      //   return a > 5;
+      // });
+
+      // console.info(result.join(" "));
+
+      //   ============================================
+      // 13.Find   : mengembalikan satu nilai
+      // const manipulation2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50];
+      // const result = manipulation2.find(function (x) {
+      //   return x > 5;
+      // });
+
+      // console.info(result);
+    </script>
+  </body>
+</html>

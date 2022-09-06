@@ -1,0 +1,32 @@
+DOM Manipulation Method :
+- Manipulasi element
+- Manipulasi node
+
+==========================================================
+
+1. Manipulasi element
+    - element.innerHTML
+    - element.style.<propertyCss>
+    - element.getAttribute('nama atribut yang ingin dipilih/diambil') = berfungsi untuk menangkap attribute di dalam tag
+    - element.setAttribute(atribut apa, isinya apa) = berfungsi untuk menambah attribute baru di dalam tag
+    - element.removeAttribute(atribut yang ingin di hapus) = berfungsi untuk menghapus attribute di dalam tag
+    - element.classList
+        1. element.classList.add(class yang ingin ditambahkan) = untuk menambahkan class baru pada element
+        2. element.classList.remove(class yang ingin di hapus) = untuk menghapus class pada element
+        3. element.classList.toggle(class ditambahkan) = untuk menambahkan class jika di clik 1x, dan menghapus class jika di clik 2x
+        4. element.classList.item(nomor index classnya) = untuk menangkap class value pada suatu element
+        5. element.classList.contains(tuliskan nama classnya) = untuk mengecek class pada suatu element, menghasilkan boolean
+        6. element.classList.replace(classLama, classBaru) = untuk mengganti class value pada suatu element dengan value yang lain 
+
+    - ...
+
+==================================================================================
+
+2. Manipulasi Node
+    - document.createElement(jenis tag apa)
+    - document.createTextNode(text yang ingin dimasukan)
+    - node.appendChild(element baru apa yang ingin digabungkan dan ditampilkan)
+    - node.insertBefore(element baru, ingin ditempatkan dimana)
+    - parentNode.removeChild(element yang mau dihapus)
+    - parentNode.replace.child(element baru, element lama)
+    - ...

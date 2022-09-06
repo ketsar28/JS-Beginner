@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prevent Default</title>
+    <link rel="stylesheet" href="prevent.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- <img src="img/syakir.jpg" width="100" height="100" /> -->
+        <span class="nama">Syakir</span>
+        <span class="telp">08123456789</span>
+        <!-- close span => a href -->
+        <a href="" class="close">×</a>
+      </div>
+      <div class="card">
+        <!-- <img src="img/nswa.jpg" width="100" height="100" /> -->
+        <span class="nama">Naswa</span>
+        <span class="telp">08123456789</span>
+        <!-- close span => a href -->
+        <a href="" class="close">×</a>
+      </div>
+    </div>
+
+    <script>
+      const tutup = document.querySelectorAll(".close");
+      const card = document.querySelectorAll(".card");
+
+      tutup.forEach(function (click) {
+        click.addEventListener("click", (x) => {
+          x.target.parentElement.style.display = "none";
+          console.log(tutup);
+          x.preventDefault(); // cegah aksi defaultnya
+        });
+      });
+    </script>
+  </body>
+</html>

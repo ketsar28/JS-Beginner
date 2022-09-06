@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+    <link rel="stylesheet" href="games.css" />
+  </head>
+  <body>
+    <h1>Suwit Jawa v2.0</h1>
+
+    <div class="container">
+      <div class="area-komputer">
+        <img src="img/gajah.png" class="img-komputer" />
+      </div>
+      <div class="info"></div>
+      <div class="area-player">
+        <ul>
+          <li>
+            <img src="img/gajah.png" class="gajah" />
+          </li>
+          <li>
+            <img src="img/orang.png" class="orang" />
+          </li>
+          <li>
+            <img src="img/semut.png" class="semut" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function pComp() {
+        const comp = Math.random();
+        if (comp < 0.34) return "gajah";
+        if (comp >= 0.34 && comp < 0.67) return "orang";
+        return "semut";
+      }
+
+      function getResult(comp, player) {
+        if (player == comp) return "SERI!";
+        if (player == "gajah") return comp == "orang" ? "MENANG" : "KALAH";
+        if (player == "orang") return comp == "gajah" ? "KALAH" : "MENANG";
+        if (player == "semut") return comp == "orang" ? "KALAH" : "MENANG";
+      }
+
+      //   cara 2
+
+      function putar() {
+        const imgComputer = document.querySelector(".img-komputer");
+        const gambar = ["gajah", "orang", "semut"];
+        let i = 0;
+        const waktuMulai = new Date().getTime();
+        setInterval(function () {
+          if (new Date().getTime() - waktuMulai > 1000) {
+            clearInterval;
+            return;
+          }
+          imgComputer.setAttribute("src", "img/" + gambar[i++] + ".png");
+          if (i == gambar.length) i = 0;
+        }, 100);
+      }
+
+      const pil = document.querySelectorAll("li img");
+      pil.forEach(function (p) {
+        p.addEventListener("click", () => {
+          const pilComp = pComp();
+          console.log(`Computer Memilih : ${pilComp}`);
+          const pilPlayer = p.className;
+          console.log(`Player Memilih : ${pilPlayer}`);
+          const result = getResult(pilComp, pilPlayer);
+          console.log(`Hasilnya : ${result}`);
+
+          putar();
+          // console.log("Computer :" + pilComp);
+          // console.log("Player :" + pilPlayer);
+          // console.log("Result :" + getResult(pilComp, pilPlayer));
+          setTimeout(function () {
+            const imgComp = document.querySelector(".img-komputer");
+            imgComp.setAttribute("src", "img/" + pilComp + ".png");
+
+            const info = document.querySelector(".info");
+            info.innerHTML = result;
+          }, 1000);
+        });
+      });
+
+      //   cara 1
+
+      //   const pGajah = document.querySelector(".gajah");
+
+      //   pGajah.addEventListener("click", () => {
+      //     const pilComp = pComp();
+      //     const pilPlayer = pGajah.className;
+      //     const result = getResult(pilComp, pilPlayer);
+      //     // console.log("Computer :" + pilComp);
+      //     // console.log("Player :" + pilPlayer);
+      //     // console.log("Result :" + getResult(pilComp, pilPlayer));
+      //     const imgComp = document.querySelector(".img-komputer");
+      //     imgComp.setAttribute("src", "img/" + pilComp + ".png");
+
+      //     const info = document.querySelector(".info");
+      //     info.innerHTML = result;
+      //   });
+
+      //   const pOrang = document.querySelector(".orang");
+
+      //   pOrang.addEventListener("click", () => {
+      //     const pilComp = pComp();
+      //     const pilPlayer = pOrang.className;
+      //     const result = getResult(pilComp, pilPlayer);
+      //     // console.log("Computer :" + pilComp);
+      //     // console.log("Player :" + pilPlayer);
+      //     // console.log("Result :" + getResult(pilComp, pilPlayer));
+      //     const imgComp = document.querySelector(".img-komputer");
+      //     imgComp.setAttribute("src", "img/" + pilComp + ".png");
+
+      //     const info = document.querySelector(".info");
+      //     info.innerHTML = result;
+      //   });
+
+      //   const pSemut = document.querySelector(".semut");
+
+      //   pSemut.addEventListener("click", () => {
+      //     const pilComp = pComp();
+      //     const pilPlayer = pSemut.className;
+      //     const result = getResult(pilComp, pilPlayer);
+      //     // console.log("Computer :" + pilComp);
+      //     // console.log("Player :" + pilPlayer);
+      //     // console.log("Result :" + getResult(pilComp, pilPlayer));
+      //     const imgComp = document.querySelector(".img-komputer");
+      //     imgComp.setAttribute("src", "img/" + pilComp + ".png");
+
+      //     const info = document.querySelector(".info");
+      //     info.innerHTML = result;
+      //   });
+    </script>
+  </body>
+</html>

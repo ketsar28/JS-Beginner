@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Event</title>
+    <style>
+      * {
+        border: 2px solid black;
+        padding: 30px;
+      }
+      .content {
+        padding: 30px;
+        margin-bottom: 20px;
+      }
+      p {
+        /* background-color: aqua; */
+        padding: 15px;
+        font-weight: 600;
+      }
+
+      .second-content {
+        /* border: 2px solid #222; */
+        padding: 20px 30px;
+      }
+
+      .second-content ul {
+        /* border: 2px solid #222; */
+        padding: 30px;
+      }
+
+      .second-content ul li {
+        /* border: 2px solid #222; */
+        padding: 20px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 id="head">Programming Language</h2>
+      <div class="wrapper">
+        <div class="content">
+          <p class="p1">Paragraph 1</p>
+          <p class="p2">Paragraph 2</p>
+          <p class="p3">Paragraph 3</p>
+        </div>
+
+        <div class="second-content">
+          <p class="p4" onclick="clickHere">Paragraph 4</p>
+          <div class="list-items">
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // DOM Event - Event Handler
+      const container2 = document.querySelector(".second-content");
+      const p4 = document.querySelector(".second-content p");
+
+      function clickHere() {
+        p4.style.background = "green";
+      }
+
+      //   DOM Event - addEventListener()
+
+      p4.addEventListener("click", () => {
+        const wrapper = document.querySelector(".second-content ul");
+        const newList = document.createElement("li");
+        const newText = document.createTextNode("List Baru");
+        newList.appendChild(newText);
+        wrapper.appendChild(newList);
+      });
+
+      p4.addEventListener("mouseup", () => {
+        p4.style.background = "green";
+      });
+
+      const p2 = document.querySelector(".p2");
+
+      p2.addEventListener("mouseenter", () => {
+        p2.style.background = "red";
+      });
+
+      p2.addEventListener("mouseover", () => {
+        console.log("Halo!");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+perbedaan object dengan array :
+    array  : kumpulan nilai yang memiliki index
+    object : kumpulan nilai yang memiliki nama
+
+===========================================================
+
+"In Javascript, object are king. If you understand object, you understand javascript"
+
+===========================================================
+
+Object pada bahasa pemrograman lain :
+1. PHP       : Associative array
+2. Pyhton    : Dictionaries
+3. C         : Hash table
+4. Java      : Hash maps
+5. Ruby/Perl : Hashes
+
+===========================================================
+
+Ada beberapa jenis dalam membuat object didalam javascript, diantaranya :
+1. Object literal : secara umum pembuatanya
+2. Function declaration : objectnya disimpan didalam sebuah function
+3. Constructor Function : pembuatannya sama seperti function declaration, hanya saja saat pemanggilan sebuah functionnya harus menambahkan keyword 'new'
+4. Object.create()

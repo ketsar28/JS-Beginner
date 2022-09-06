@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="DOM-manipulation.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 id="head">Programming Language</h2>
+      <div class="wrapper-4">
+        <div class="content">
+          <p class="p1">Paragraph 1</p>
+          <p class="p2">Paragraph 2</p>
+          <p class="p3">Paragraph 3</p>
+        </div>
+
+        <div class="content-two">
+          <p class="p4">Paragraph 4</p>
+          <div class="list-items">
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // getAttribute()
+      const title = document.querySelector("h2#head");
+
+      title.setAttribute("class", "title");
+      console.log(title.getAttribute("class"));
+      //   title.removeAttribute("id");
+
+      //   classList()
+      const judul = document.querySelector("h2#head");
+
+      judul.classList.add("active", "aktif");
+      console.log(judul.classList.item(1));
+      judul.classList.replace("aktif", "other-active");
+      console.log(judul.classList.contains("other-active"));
+
+      // manipulation node
+      const newP = document.createElement("p");
+      const newTextNode = document.createTextNode("New Paragraph");
+
+      newP.appendChild(newTextNode);
+
+      const newContainer = document.querySelector(".container .content");
+      newContainer.appendChild(newP);
+
+      // manipulation node (list)
+      const newList = document.createElement("li");
+      const newTextList = document.createTextNode("New List");
+
+      newList.appendChild(newTextList);
+
+      const combain = document.querySelector(".content-two ul");
+      const position = document.querySelector("li:nth-child(3)");
+      combain.insertBefore(newList, position);
+
+      newList.addEventListener("click", () => {
+        newList.classList.toggle("active");
+      });
+
+      // removeChild()
+      const removeElement = document.querySelectorAll("p")[2];
+
+      newContainer.removeChild(removeElement);
+
+      // replace, add element
+      const createElement = document.createElement("a");
+      const takeP = newContainer.querySelectorAll("p")[1];
+      const createText = document.createTextNode("New Link");
+      const createNewP = document.createElement("p");
+
+      createElement.setAttribute("href", "#");
+      createElement.appendChild(createText);
+      createNewP.appendChild(createText);
+
+      newContainer.insertBefore(createElement, takeP);
+      newContainer.replaceChild(createNewP, createElement);
+
+      createNewP.style.background = "green";
+      newP.style.background = "green";
+      newList.style.background = "green";
+
+      // wrapper background
+      const wrapperSatu = document.getElementsByClassName("container")[0];
+      const wrapperDua = document.getElementsByClassName("wrapper-4")[0];
+      const wrapperTiga = document.getElementsByClassName("content-two")[0];
+
+      document.body.style.backgroundColor = "lightblue";
+      wrapperSatu.style.backgroundColor = "salmon";
+      wrapperDua.style.backgroundColor = "Yellow";
+      wrapperTiga.style.backgroundColor = "#fff";
+      newContainer.style.backgroundColor = "#fff";
+      judul.style.backgroundColor = "#fff";
+      newContainer;
+    </script>
+  </body>
+</html>

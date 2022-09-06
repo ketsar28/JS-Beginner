@@ -1,0 +1,35 @@
+Daftar Event :
+
+- Mouse Event
+- Keyboard Event
+- Resources Event
+- Focus Event
+- View Event
+- Form Event
+- CSS Animation & Transition Event
+- Drag & Drop Event
+- Dll
+
+========================================
+
+1. Mouse Event(keyword) :
+    - click
+    - dblclick
+    - mouseover
+    - mouseenter =  ketika element di sorot/select
+    - mouseup = ketika cursor keluar dari element
+    - wheel
+    - Dll
+
+2. Keyboard Event(keyword) :
+    - keydown
+    - keypress
+    - keyup
+
+3. View Event(keyword) : 
+    - resize
+    - scroll
+
+4. Form Event(keyword) :
+    - reset
+    - submit

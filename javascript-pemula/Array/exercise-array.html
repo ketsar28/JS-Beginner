@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <script>
+      // satu
+
+      const penumpang = [];
+
+      const tambahPenumpang = function (namaPenumpang, penumpang) {
+        if (penumpang.length == 0) {
+          penumpang.push(namaPenumpang);
+          return penumpang;
+        } else {
+          for (let i = 0; i < penumpang.length; i++) {
+            if (penumpang[i] == undefined) {
+              penumpang[i] = namaPenumpang;
+              return penumpang;
+            } else if (penumpang[i] == namaPenumpang) {
+              console.log(namaPenumpang + " Sudah ada di angkot ini!");
+              return penumpang;
+            } else if (i == penumpang.length - 1) {
+              penumpang.push(namaPenumpang);
+              return penumpang;
+            }
+          }
+        }
+      };
+
+      // hapus Penumpang
+
+      const hapusPenumpang = function (namaPenumpang, penumpang) {
+        if (penumpang.length == 0) {
+          console.log("Maaf saat ini angkot masih kosong");
+          return penumpang;
+        } else {
+          for (let i = 0; i < penumpang.length; i++) {
+            if (penumpang[i] == namaPenumpang) {
+              penumpang[i] = undefined;
+              return penumpang;
+            } else if (i == penumpang.length - 1) {
+              console.log(" dia tidak ada di angkot ini");
+              return penumpang;
+            }
+          }
+        }
+      };
+
+      // const penumpang = [];
+
+      // const penumpangMasuk = function (nama, penumpang) {
+      //   if (penumpang.length == 0) {
+      //     penumpang.push(nama);
+      //     return penumpang;
+      //   } else {
+      //     for (let i = 0; i < penumpang.length; i++) {
+      //       if (penumpang.length == undefined) {
+      //         penumpang[i] = nama;
+      //         return penumpang;
+      //       } else if (i == penumpang.length - 1) {
+      //         penumpang.push(nama);
+      //         return penumpang;
+      //       }
+      //     }
+      //   }
+      // };
+      //   =====================================================
+
+      //   dua
+
+      //   const penumpang = [];
+
+      //   function tambahPenumpang(namaPenumpang, penumpang) {
+      //     if (penumpang.indexOf(nama) > -1) {
+      //       console.log(namaPenumpang + " sudah ada di angkot ini!");
+      //     } else {
+      //       const bangkuKosong = penumpang.findIndex(Object.is.bind(null, undefined));
+      //       if (kursiKosong >= 0) {
+      //         penumpang[bangkuKosong] = namaPenumpang;
+      //       } else {
+      //         array.push(namaPenumpang);
+      //       }
+      //     }
+      //     return penumpang;
+      //   }
+
+      // ===============================================================
+
+      // tiga
+    </script>
+  </body>
+</html>

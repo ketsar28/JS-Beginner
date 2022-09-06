@@ -1,0 +1,38 @@
+Pengertian DOM(Document Object Model) :
+"Representasi element HTML pada document menjadi sebuah object. Yang mana DOM ini sangat penting dalam pemrograman" /
+
+"Hasil Representasi element HTML pada document menjadi sebuah object"
+
+========================================================================
+
+Dalam DOM ada yang namanya DOM Tree. Jadi DOM Tree ini adalah hasil representasi dari element" HTML yang kita buat dalam bentuk pohon. 
+
+Ketika element HTML di tampilkan dibrowser maka itu akan dibaca oleh browser bahwa itu adalah sebuah document. 
+
+Jadi, Document = fungsinya mengelola yang ada pada browser
+
+========================================================================
+
+DOM (Document Object Model) :
+
+1. Antarmuka pemrograman berbasis object yang merepresentasikan document web
+2. DOM membuat seluruh komponen dari halaman web dapat diakses & dimanipulasi
+3. Terdapat beberapa komponen :
+    - Element HTML
+    - Attribute
+    - Text
+    - dll
+
+4. DOM dapat dimanipulasi(dibuat, diubah, dihapus) menggunakan javascript.
+
+========================================================================
+
+macam-macam DOM :
+
+1. DOM Selection = bagaimana caranya mengambil element HTML menggunakan DOM
+
+2. DOM Manipulation = bagaimana caranya untuk menambah, mengubah, menghapus menggunakan teknik DOM
+
+3. DOM Traversal = bagaimana caranya untuk menelusuri element HTML melalui element HTML yang lain
+
+4. Event Handling = bagaimana untuk menulusuri DOM, dan melakukan perubahan pada DOM

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 0;
+}
+
+body {
+  background-color: #555;
+}
+
+.wrapper {
+  width: 606px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 3px solid #a00505;
+}
+
+.thumbnail {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.thumb:hover {
+  opacity: 0.5;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+.aktif {
+  opacity: 0;
+  animation: fade 0.5s forwards;
+}
+
+.select {
+  opacity: 0.5;
+}
